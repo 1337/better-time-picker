@@ -13,7 +13,7 @@
             bindToController: true,
             controllerAs: 'betterTimePicker',
 
-            controller: function ($scope) {
+            controller: function () {
                 var betterTimePicker = this;
                 betterTimePicker.initializeTime = function () {
                     betterTimePicker.PageState = {};
