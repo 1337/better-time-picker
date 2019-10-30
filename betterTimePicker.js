@@ -40,6 +40,7 @@
                     betterTimePicker.PageState.times = [];
                     betterTimePicker.PageState.hourPickerEnabled = false;
                     betterTimePicker.PageState.minutePickerEnabled = false;
+                    betterTimePicker.PageState.amPmPickerEnabled = false;
                 };
 
                 betterTimePicker.selectHourPicker = function () {
@@ -75,6 +76,10 @@
                             value: value
                         });
                     }
+                };
+
+                betterTimePicker.selectAmPmPicker = function () {
+                    betterTimePicker.PageState.amPmPickerEnabled = true;
                 };
 
                 betterTimePicker.toggleAmPm = function () {
@@ -130,6 +135,8 @@
                         betterTimePicker.selectMinutePicker();
                     } else if (betterTimePicker.PageState.minutePickerEnabled) {
                         betterTimePicker.setSelectedMinute(time);
+                        // Switch to select am pm.
+                        betterTimePicker.selectAmPmPicker();
                     }
                 };
             },
